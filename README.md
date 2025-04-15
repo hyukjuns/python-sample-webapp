@@ -1,4 +1,20 @@
 # FastAPI Sample API Server
+
+### mysql docker run & env setting
+```
+docker run -d -p 3306:3306 \ 
+--env MYSQL_DATABASE=notes \
+--env MYSQL_ROOT_PASSWORD=myadmin \
+--env MYSQL_USER=myadmin \
+--env MYSQL_PASSWORD=myadmin \
+mysql:8.2.0
+
+export DB_CONNECTION_STRING="mysql+pymysql://myadmin:myadmin@localhost:3306/notes"
+```
+
+
+
+---
 ## Goals
 - Develop and Build REST API Application
 - Make GitOps and High Observability
